@@ -34,7 +34,13 @@ namespace AoC_2022
                 }
             }
 
+            Console.WriteLine("Part One:");
             Console.WriteLine($"Max calories is: {calorieTotals.Max()}");
+
+            Console.WriteLine();
+            Console.WriteLine("Part Two:");
+            var top3 = calorieTotals.OrderByDescending(x => x).Take(3).Sum();
+            Console.WriteLine($"Top 3 total calories is: {top3}");
         }
 
     }
